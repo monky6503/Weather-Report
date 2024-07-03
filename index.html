@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="w-full min-h-screen bg-gradient-to-t from-teal-100 to-lime-100 flex flex-col justify-start items-center">
+    <div class="navbar flex flex-wrap items-center justify-center lg:justify-between gap-3 p-4">
+      <h1 class="text-3xl">臺灣天氣預報</h1>
+      <div class="flex flex-wrap justify-center items-center gap-5 ">
+        <button
+          class="btn bg-gradient-to-tr from-[#86cfff] via-[#6DD5FA] to-[#FFFFFF] hover:bg-[#A0DEFF] border-0 hover:border-none rounded-lg text-2xl">全臺</button>
+        <button
+          class="btn bg-gradient-to-tr from-[#86cfff] via-[#6DD5FA] to-[#FFFFFF] hover:bg-[#A0DEFF] border-0 hover:border-none rounded-lg text-2xl">北部</button>
+        <button
+          class="btn bg-gradient-to-tr from-[#86cfff] via-[#6DD5FA] to-[#FFFFFF] hover:bg-[#A0DEFF] border-0 hover:border-none rounded-lg text-2xl">中部</button>
+        <button
+          class="btn bg-gradient-to-tr from-[#86cfff] via-[#6DD5FA] to-[#FFFFFF] hover:bg-[#A0DEFF] border-0 hover:border-none rounded-lg text-2xl">南部</button>
+        <button
+          class="btn bg-gradient-to-tr from-[#86cfff] via-[#6DD5FA] to-[#FFFFFF] hover:bg-[#A0DEFF] border-0 hover:border-none rounded-lg text-2xl">東部</button>
+        <button
+          class="btn bg-gradient-to-tr from-[#86cfff] via-[#6DD5FA] to-[#FFFFFF] hover:bg-[#A0DEFF] border-0 hover:border-none rounded-lg text-2xl">離島</button>
+      </div>
+    </div>
+    <div class="flex py-2">
+      <p class="time text-2xl"></p>
+    </div>
+    <div class="info grid grid-cols-1 lg:grid-cols-2  xl:grid-cols-3 3xl:grid-cols-4 gap-20  py-5">
+    </div>
+  </div>
+  <script src="./JS/index.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
