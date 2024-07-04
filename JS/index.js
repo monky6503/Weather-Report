@@ -90,7 +90,7 @@ function setTime(){
   let months = now.getMonth()+1;
   let dates = now.getDate();
   let days = now.getDay();
-  let hours = now.getHours();
+  let hours = ("0"+now.getHours()).slice(-2);
   let mins = ("0"+now.getMinutes()).slice(-2);
   let seconds = ("0"+now.getSeconds()).slice(-2);
   let separator = (now.getSeconds() % 2 === 0) ? ":" : "&nbsp;";
