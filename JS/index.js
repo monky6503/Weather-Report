@@ -45,9 +45,6 @@ fetch(url)
       console.log(err);
     })
 
-
-  
-
 function updateWeather(area){
   let areaWeather = (area === "全臺")? weatherList: weatherList.filter(county => county.area === area);
   const now = new Date()
@@ -59,27 +56,24 @@ function updateWeather(area){
     let iconNumber = ("0"+areaWeather[i].weatherIconNumber).slice(-2);
     infoElement.innerHTML += `<div data-aos="flip-right" data-aos-easing="linear" data-aos-duration="700">
                                 <div class="card bg-gradient-to-bl from-[#C9D6FF] to-[#FFFFFF] w-[370px] shadow-xl justify-self-center">
-                                  <h2 class="js-city text-center text-2xl mt-5"><i
+                                  <h2 class="text-center text-2xl mt-5"><i
                                       class="fa-solid fa-map-location-dot"></i>&nbsp;&nbsp;<span></span>${areaWeather[i].city}
                                   </h2>
                                   <div class="flex flex-col justify-center items-center py-4">
-                                    <img src="https://www.cwa.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${day_Night}/${iconNumber}.svg" alt=".." class="weather_icon size-40">
-                                    <p class="js-weather"><span></span>${areaWeather[i].weather}</p>
+                                    <img src="https://www.cwa.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${day_Night}/${iconNumber}.svg" alt=".." class="size-40">
+                                    <p><span></span>${areaWeather[i].weather}</p>
                                   </div>
                                   <div class="card-body px-4">
                                     <div class="flex justify-around">
-                                      <p class="js-temp mr-2"><i class="fa-solid fa-temperature-full"></i>&nbsp;&nbsp;<span></span>${areaWeather[i].MinT} &deg;C ~ ${areaWeather[i].MaxT} &deg;C</p>
-                                      <p class="js-pop mr-2"><i class="fa-solid fa-umbrella"></i>&nbsp;&nbsp;<span></span>${areaWeather[i].pop}%</p>
-                                      <p class="js-ci"><i class="fa-solid fa-seedling"></i>&nbsp;&nbsp;<span></span>${areaWeather[i].CI}</p>
+                                      <p><i class="fa-solid fa-temperature-full"></i>&nbsp;&nbsp;<span></span>${areaWeather[i].MinT} &deg;C ~ ${areaWeather[i].MaxT} &deg;C</p>
+                                      <p><i class="fa-solid fa-umbrella"></i>&nbsp;&nbsp;<span></span>${areaWeather[i].pop}%</p>
+                                      <p><i class="fa-solid fa-seedling"></i>&nbsp;&nbsp;<span></span>${areaWeather[i].CI}</p>
                                     </div>
                                   </div>
                                 </div>
                               </div>`;
   };
 };
-
-
-
 
 const buttonElement = document.querySelectorAll("button");
 buttonElement.forEach(button => {
@@ -88,7 +82,6 @@ buttonElement.forEach(button => {
     updateWeather(Area);
   })
 })
-
 
 const time = document.querySelector(".time");
 function setTime(){
