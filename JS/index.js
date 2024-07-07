@@ -1,4 +1,5 @@
-url = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-C7E3004B-A2E9-4392-8565-09EB9EB71922';
+'use strict';
+const url = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-C7E3004B-A2E9-4392-8565-09EB9EB71922';
 
 let county = {"北部":["新北市","臺北市","桃園市","基隆市","宜蘭縣","新竹市","新竹縣"],
               "中部":["苗栗縣","臺中市","彰化縣","南投縣","雲林縣"],

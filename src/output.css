@@ -1837,6 +1837,14 @@ html {
   margin-inline-start: calc(var(--border-btn) * -1);
 }
 
+.z-20 {
+  z-index: 20;
+}
+
+.mt-28 {
+  margin-top: 7rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -1894,8 +1902,8 @@ html {
   justify-content: space-around;
 }
 
-.gap-20 {
-  gap: 5rem;
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-3 {
@@ -1916,6 +1924,11 @@ html {
 
 .border-0 {
   border-width: 0px;
+}
+
+.bg-amber-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 243 199 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-bl {
