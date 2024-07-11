@@ -47,7 +47,7 @@ function updateWeather(area){
   let areaWeather = (area === "全臺")? weatherList: weatherList.filter(county => county.area === area);
   const now = new Date()
   const hours = now.getHours();
-  let day_Night = (hours > 18 || hours < 6)?"night":"day";
+  let day_Night = (hours >= 18 || hours < 6)?"night":"day";
   const infoElement = document.querySelector(".info");
   infoElement.innerHTML = '';
   areaWeather.forEach(area =>{
